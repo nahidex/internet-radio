@@ -84,6 +84,24 @@ header {
 .channel-area {
     border-top: 1px solid rgba($base, .4);
     padding: 0 2rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    .nav {
+        display: flex;
+        .arrow {
+            height: 1.5rem;
+            width: 1.5rem;
+            // display: block;
+            background-color: $green;
+            text-align: center;
+            border-radius: 1.5rem;
+            // line-height: 1.5;
+            margin: 0 0.25rem;
+            color: $white;
+        }
+    }
     .tabs {
         a {
             text-decoration: none;
@@ -101,7 +119,53 @@ header {
     }
 
 }
+.channel-cards {
+    padding: 0 2rem;
+    
+    .card {
+        margin-right: 2rem;
+        // width: 140px;
+        display: inline-block;
+        // overflow: hidden;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 17px 18px 0px rgba($black, 0.1);
 
+        img {
+            display: block;
+        }
+        .card-description {
+            background-color: $white;
+            padding: 0.75rem;
+            position: relative;
+            h4 {
+                margin: 0;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1;
+
+            }
+            span {
+                color: rgba($black, 0.6);
+                font-size: 12px;
+            }
+            a {
+                position: absolute;
+                top: -12px;
+                background-color: $green;
+                height: 1.75rem;
+                width: 1.75rem;
+                text-decoration: none;
+                font-size: 1rem;
+                line-height: 1.75;
+                border-radius: 1rem;
+                text-align: center;
+                right: 0.75rem;
+                color: $white;
+            }
+        }
+    }
+}
 
 .player-wrapper {
     margin-top: 2rem;
