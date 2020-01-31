@@ -27,6 +27,8 @@
  */
 
 import './scss/style.scss';
+// const fs = require('fs');
+// console.log(fs);
 
 const btns = document.querySelectorAll('.btn');
 const audio = document.getElementById("audioPlayer"); 

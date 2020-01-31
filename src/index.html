@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-
   </head>
   <body>
     <header>
@@ -19,7 +18,7 @@
     <main>
       <div class="mid-area">
         <div class="player-wrapper">
-          <img src="https://via.placeholder.com/150x150" alt="">
+          <figure><img src="./img/foorti.png" alt=""></figure>
           <div class="description">
             <h1>Radio Foorti</h1>
             <h6>88.0 FM</h6>
@@ -40,7 +39,12 @@
                   </div>
                 </div>
                 <div class="actions">
-                  <button>Play</button>
+                  <button class="play-pause">
+                    <div class="inner-wrapper">
+                      <i class="material-icons-round">play_arrow</i>
+                      <i class="material-icons-round">pause</i>
+                    </div>
+                  </button>
                 </div>
               </a>
             </li>
@@ -54,7 +58,12 @@
                   </div>
                 </div>
                 <div class="actions">
-                  <button>Play</button>
+                  <button class="play-pause active">
+                    <div class="inner-wrapper">
+                      <i class="material-icons-round">play_arrow</i>
+                      <i class="material-icons-round">pause</i>
+                    </div>
+                  </button>
                 </div>
               </a>
             </li>
@@ -118,7 +127,7 @@
       </div>
       <div class="channel-cards">
         <div class="card">
-          <img src="./img/aamar.png" alt="">
+          <figure><img src="./img/aamar.png" alt=""></figure>
           <div class="card-description">
             <h4>Radio Foorti</h4>
             <span>88.0 FM</span>
@@ -126,7 +135,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="./img/aamar.png" alt="">
+          <figure><img src="./img/foorti.png" alt=""></figure>
           <div class="card-description">
             <h4>Radio Foorti</h4>
             <span>88.0 FM</span>
@@ -134,7 +143,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="./img/aamar.png" alt="">
+          <figure><img src="./img/jago.png" alt=""></figure>
           <div class="card-description">
             <h4>Radio Foorti</h4>
             <span>88.0 FM</span>
@@ -142,7 +151,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="./img/aamar.png" alt="">
+          <figure><img src="./img/shadin.png" alt=""></figure>
           <div class="card-description">
             <h4>Radio Foorti</h4>
             <span>88.0 FM</span>
@@ -173,7 +182,5 @@
         </div>
       </div>
     </div>
-
-
   </body>
 </html>
