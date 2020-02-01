@@ -228,7 +228,8 @@ header {
        color: rgba(black, 0.4);
     }
     ol {
-
+        max-height: 16rem;
+        overflow: auto;
         padding-left: 3rem;
         list-style-type: decimal-leading-zero;
         li {
