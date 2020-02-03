@@ -12,11 +12,12 @@ export default class Main extends Component {
     this.handlePlay = this.handlePlay.bind(this);
     this.handlePause = this.handlePause.bind(this);
     this.player = new MusicPlayer();
-
+  
     this.state = { 
       isPlaying: false,
       lastPlayedChannel: db[0],
-      currentlyPlayingChannel: { id: null } 
+      currentlyPlayingChannel: { id: null },
+      progress: false
     };
   }
 
@@ -29,13 +30,26 @@ export default class Main extends Component {
 
     this.player.changeSource(channel.url);
     this.player.play();
+    this.handleProgress();
   }
 
   handlePause (channel) {
     if (this.state.currentlyPlayingChannel.id === channel.id) {
-      this.setState({ ...this.state, ...{ isPlaying: false, lastPlayedChannel: channel, currentlyPlayingChannel: { id: null } }});
+      this.setState({ ...this.state, ...{ isPlaying: false, progress: false, lastPlayedChannel: channel, currentlyPlayingChannel: { id: null } }});
       this.player.pause();
+    
     }
+  }
+
+  handleProgress() {
+    this.player.on('loadstart',  () => {
+      this.setState({ progress: true })
+    });
+
+    this.player.on('loadeddata', () => {
+      this.setState({ progress: false })
+    })
+
   }
 
   render() {
@@ -44,8 +58,9 @@ export default class Main extends Component {
         currentlyPlayingChannel: this.state.currentlyPlayingChannel, 
         isPlaying: this.state.isPlaying,
         lastPlayedChannel: this.state.lastPlayedChannel,
+        progress: this.state.progress,
         handlePlay: this.handlePlay,
-        handlePause: this.handlePause,
+        handlePause: this.handlePause
       }}>
       <div>
         <Header />

@@ -186,7 +186,17 @@ header {
         border-radius: 0.75rem;
         box-shadow: 0px 10px 16px 0 rgba($black, 0.2);
         margin: 0;
-        overflow: hidden;
+        overflow: hidden; 
+        position: relative;
+        background-color: $white;
+    }
+    
+    .loader {
+        width: 48px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
     img {
         width: 100%;   
@@ -234,7 +244,7 @@ header {
         list-style-type: decimal-leading-zero;
         li {
             padding-left: 1rem;
-            a {
+            .item {
                 display: flex;
                 justify-content: space-between;
                 text-decoration: none;
@@ -330,10 +340,6 @@ header {
         }
     }
 }
-
-
-
-
 
 
 .btn {

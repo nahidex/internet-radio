@@ -6,7 +6,7 @@ export default class Player extends Component {
         return (
           <PlayerConsumer>
           {
-              ({ currentlyPlayingChannel, isPlaying, lastPlayedChannel, handlePlay, handlePause}) => {    
+              ({ currentlyPlayingChannel, isPlaying, lastPlayedChannel, progress, handlePlay, handlePause}) => {    
               var ch;              
               if(!isPlaying) {
                 ch = lastPlayedChannel;
@@ -16,7 +16,9 @@ export default class Player extends Component {
 
               return (
                 <div className="player-wrapper">
-                  <figure><img src="./img/foorti.png" alt="" /></figure>
+                  <figure>
+                    <img className={ progress? 'loader': '' } src={ progress? "./img/icons/loader.svg": ch.logo } alt="" />
+                  </figure>
                   <div className="description">
                     <h1>{ ch.name || "No Channel" }</h1>
                     <h6>{ ch.frequency || 'No frequency' }</h6>
