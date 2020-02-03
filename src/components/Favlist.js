@@ -1,23 +1,13 @@
 import React, { Component } from 'react'
 import api from './../api/api';
 import FavItem from './FavItem';
-import Player from '../api/player';
 
 export default class Favlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      channel: [
-          {
-          id: '',
-          name: '',
-          frequency: '',
-          url: ''
-        }
-      ],
+      channel: [],
     }
-    this.player = new Player();
-    this.playerHandler = this.playerHandler.bind(this);
   }
 
   componentDidMount() {
@@ -25,19 +15,6 @@ export default class Favlist extends Component {
     this.setState({
       channel: allChannel
     });
-  }
-
-  playerHandler(data) {
-    this.player.on('loadedmetadata', function(event) {
-      console.log(event);
-    })
-
-    if (this.player.paused()) {
-      this.player.changeSource(data);
-      this.player.play();  
-    } else {
-      this.player.pause();
-    }   
   }
 
   render() {

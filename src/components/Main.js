@@ -4,11 +4,49 @@ import Favlist from './Favlist'
 import MusicPlayer from '../api/player'
 import Player from './Player'
 import { PlayerProvider } from '../api/context'
+import db from '../db';
 
 export default class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.handlePlay = this.handlePlay.bind(this);
+    this.handlePause = this.handlePause.bind(this);
+    this.player = new MusicPlayer();
+
+    this.state = { 
+      isPlaying: false,
+      lastPlayedChannel: db[0],
+      currentlyPlayingChannel: { id: null } 
+    };
+  }
+
+  handlePlay (channel) {
+    this.setState({ ...this.state, 
+      ...{ isPlaying: true,
+        currentlyPlayingChannel: channel
+      }
+    });
+
+    this.player.changeSource(channel.url);
+    this.player.play();
+  }
+
+  handlePause (channel) {
+    if (this.state.currentlyPlayingChannel.id === channel.id) {
+      this.setState({ ...this.state, ...{ isPlaying: false, lastPlayedChannel: channel, currentlyPlayingChannel: { id: null } }});
+      this.player.pause();
+    }
+  }
+
   render() {
     return (
-      <PlayerProvider value={MusicPlayer}>
+      <PlayerProvider value={{
+        currentlyPlayingChannel: this.state.currentlyPlayingChannel, 
+        isPlaying: this.state.isPlaying,
+        lastPlayedChannel: this.state.lastPlayedChannel,
+        handlePlay: this.handlePlay,
+        handlePause: this.handlePause,
+      }}>
       <div>
         <Header />
         <main>

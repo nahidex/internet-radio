@@ -1,17 +1,33 @@
 import React, { Component } from 'react'
+import { PlayerConsumer } from '../api/context'
 
 export default class Player extends Component {
     render() {
         return (
-            <div className="player-wrapper">
-              <figure><img src="./img/foorti.png" alt="" /></figure>
-              <div className="description">
-                <h1>Radio Foorti</h1>
-                <h6>88.0 FM</h6>
-                <p>Currenlty Playing</p>
-                <a href="#" className="btn-common"><i className="material-icons-round">play_arrow</i> Play</a>
-              </div>
-            </div>
+          <PlayerConsumer>
+          {
+              ({ currentlyPlayingChannel, isPlaying, lastPlayedChannel, handlePlay, handlePause}) => {    
+              var ch;              
+              if(!isPlaying) {
+                ch = lastPlayedChannel;
+              } else {
+                ch = currentlyPlayingChannel;
+              }
+
+              return (
+                <div className="player-wrapper">
+                  <figure><img src="./img/foorti.png" alt="" /></figure>
+                  <div className="description">
+                    <h1>{ ch.name || "No Channel" }</h1>
+                    <h6>{ ch.frequency || 'No frequency' }</h6>
+                    <p>Currenlty Playing</p>
+                    <a href="#" onClick={() => { isPlaying ? handlePause(ch) : handlePlay(ch) }} className="btn-common"><i className="material-icons-round">{isPlaying ? 'pause' : 'play_arrow'}</i> {isPlaying? 'Pause': 'Play'}</a>
+                  </div>
+                </div>
+              )
+            }
+          }
+          </PlayerConsumer>
         )
     }
 }

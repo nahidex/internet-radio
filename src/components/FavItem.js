@@ -20,7 +20,7 @@ export default class FavItem extends Component {
             </div>
           </div>
           <div className="actions">
-            <ButtonPlay playerHandler={ this.props.playerHandler } url={url}/>
+            <ButtonPlay playerHandler={ this.props.playerHandler } channel={this.props.channel}/>
           </div>
         </a>
       </li>
