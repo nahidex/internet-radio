@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 29 29" xml:space="preserve">
+    <style type="text/css">.st0{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;} .st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st2{fill:none;stroke:#000000;stroke-miterlimit:10;} .st3{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:1.7411,1.7411;} .st4{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.0261,4.0522;} .st5{fill:#606060;} .st6{stroke:#000000;stroke-miterlimit:10;}</style>
+    <path d="M6.843 20H2.5a1 1 0 0 1 0-2h4.343c.79 0 1.563-.32 2.121-.878l6.657-6.657A4.967 4.967 0 0 1 19.157 9H23.5a1 1 0 0 1 0 2h-4.343c-.79 0-1.563.32-2.121.878l-6.657 6.657A4.967 4.967 0 0 1 6.843 20z"/>
+    <path d="M23.5 20h-4.343a4.967 4.967 0 0 1-3.535-1.464l-6.657-6.657A3.02 3.02 0 0 0 6.843 11H2.5a1 1 0 0 1 0-2h4.343c1.335 0 2.591.52 3.535 1.464l6.657 6.657a3.02 3.02 0 0 0 2.122.879H23.5a1 1 0 0 1 0 2z"/>
+    <path d="M21.5 12.412V7.588c0-.368.401-.596.717-.408l4.052 2.412a.474.474 0 0 1 0 .815l-4.052 2.412a.474.474 0 0 1-.717-.407z"/>
+    <path d="M21.5 21.412v-4.823c0-.368.401-.596.717-.408l4.052 2.412a.474.474 0 0 1 0 .815l-4.052 2.412a.475.475 0 0 1-.717-.408z"/>
+    <metadata>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <rdf:Description about="https://iconscout.com/legal#licenses" dc:title="shuffle,music,player,function" dc:description="shuffle,music,player,function" dc:publisher="Iconscout" dc:date="2017-10-03" dc:format="image/svg+xml" dc:language="en">
+                <dc:creator>
+                    <rdf:Bag>
+                        <rdf:li>Jemis Mali</rdf:li>
+                    </rdf:Bag>
+                </dc:creator>
+            </rdf:Description>
+        </rdf:RDF>
+    </metadata>
+</svg>

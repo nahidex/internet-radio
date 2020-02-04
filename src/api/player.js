@@ -23,4 +23,9 @@ export default class Player {
         this.audio.src = src;
         this.audio.load();
     }
+    updateVolume(vol) {
+        // console.log(vol);
+        
+        this.audio.volume = vol;
+    }
 }

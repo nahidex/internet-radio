@@ -67,7 +67,7 @@ module.exports = [
         name: 'Radio Dhoni',
         frequency: '91.2 FM',
         url: "http://182.160.110.180:1020/;",
-        logo: './img/dhoni.jpg'
+        logo: './img/dhoni.png'
     },
     {
         id: 11,

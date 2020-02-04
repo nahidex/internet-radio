@@ -2,15 +2,16 @@ import React, { Component } from 'react'
 import Header from './Header'
 import Favlist from './Favlist'
 import MusicPlayer from '../api/player'
-import Player from './Player'
 import { PlayerProvider } from '../api/context'
 import db from '../db';
+import Detail from './Detail'
 
 export default class Main extends Component {
   constructor(props) {
     super(props);
     this.handlePlay = this.handlePlay.bind(this);
     this.handlePause = this.handlePause.bind(this);
+    this.handleVolume = this.handleVolume.bind(this);
     this.player = new MusicPlayer();
   
     this.state = { 
@@ -51,6 +52,9 @@ export default class Main extends Component {
     })
 
   }
+  handleVolume(volume) {
+    this.player.updateVolume(volume)    
+  }
 
   render() {
     return (
@@ -66,7 +70,7 @@ export default class Main extends Component {
         <Header />
         <main>
           <div className="mid-area">
-            <Player />
+            <Detail handleVolume={this.handleVolume} />
             <Favlist />
           </div>
 

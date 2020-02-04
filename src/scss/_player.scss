@@ -1,0 +1,103 @@
+.top-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-actions {
+  display: flex;
+  button {
+    width: 1.75rem;
+    background-color: transparent;
+    border: none;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+      outline: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    &.play-pause {
+      width: 2.5rem;
+    }
+    &.shuffle {
+    }
+    &.repeat {
+      img {
+        width: 11px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.player-description {
+  display: flex;
+  background-color: rgba($base, 0.2);
+  border: 1px solid rgba($base, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  figure {
+    margin: 0;
+    font-size: 0;
+    border-right: 1px solid rgba($base, 0.3);
+  }
+
+  img {
+    width: 48px;
+  }
+  .texts {
+    width: 270px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p,
+    span {
+      margin: 0;
+      font-size: 0.75rem;
+      line-height: 1;
+      display: block;
+      font-weight: normal;
+    }
+    p {
+      margin-bottom: 0.3rem;
+    }
+    span {
+      color: rgba($black, 0.4);
+    }
+  }
+}
+
+.player-volume {
+  .slider {
+    width: 140px;
+    height: 3px;
+    background-color: $base;
+    position: relative;
+    span {
+      position: absolute;
+    }
+    .bar {
+      left: 0;
+      top: 0;
+      height: 3px;
+      width: 30px;
+      background-color: $green;
+    }
+    .handle {
+      height: 1rem;
+      width: 1rem;
+      background-color: $green;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+  }
+}
