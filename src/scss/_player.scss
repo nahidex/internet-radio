@@ -76,8 +76,8 @@
 
 .player-volume {
   .slider {
-    width: 140px;
-    height: 3px;
+    width: 80px;
+    height: 4px;
     background-color: $base;
     position: relative;
     span {
@@ -87,7 +87,7 @@
       left: 0;
       top: 0;
       height: 3px;
-      width: 30px;
+      width: 0;
       background-color: $green;
     }
     .handle {

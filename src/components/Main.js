@@ -64,7 +64,8 @@ export default class Main extends Component {
         lastPlayedChannel: this.state.lastPlayedChannel,
         progress: this.state.progress,
         handlePlay: this.handlePlay,
-        handlePause: this.handlePause
+        handlePause: this.handlePause,
+        handleVolume: this.handleVolume
       }}>
       <div>
         <Header />
